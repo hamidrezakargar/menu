@@ -1,0 +1,58 @@
+button {
+    height:auto;
+    background: transparent;
+    position: relative;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: .5px solid #76793F;
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: #383926;
+    transition: color 0.2s 0.1s ease-out;
+    text-align: center;
+    -webkit-transition: color 0.2s 0.1s ease-out;
+    -moz-transition: color 0.2s 0.1s ease-out;
+    -ms-transition: color 0.2s 0.1s ease-out;
+    -o-transition: color 0.2s 0.1s ease-out;
+    -webkit-border-radius: 25x;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+  
+  button span {
+    margin: 1px;
+  }
+  
+  button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.1s ease-out;
+    z-index: -1;
+  }
+  
+  button:hover {
+  color:#AA502F;
+  
+  }
+  
+  button:active::before {
+    box-shadow: inset 0 0 0 10em #2D1401;
+  }
