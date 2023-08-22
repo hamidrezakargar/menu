@@ -21,4 +21,31 @@ list.forEach((el) => {
             el3.style.display = "flex";
         })
     })
-})
+});
+
+
+
+
+
+
+const search = document.getElementById("search");
+const productName = document.querySelectorAll(".badge");
+const noResult = document.querySelector(".no-result");
+
+search.addEventListener("keyup", filterProducts);
+
+function filterProducts(e) {
+  const text = e.target.value.toLowerCase();
+
+  productName.forEach((product) => {
+    const item = product.textContent;
+
+    if (item.toLowerCase().indexOf(text) != -1) {
+      product.parentElement.parentElement.parentElement.parentElement.style.display = "block";
+      noResult.style.display = "none";
+    } else {
+      product.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+      noResult.style.display = "block";
+    }
+  });
+};
