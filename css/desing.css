@@ -43,7 +43,7 @@ body{
 
 .card-1{
     border-radius: 10px;
-    background-color: #887154;
+    /* background-color: #887154; */
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;
